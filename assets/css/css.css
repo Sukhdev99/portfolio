@@ -10,6 +10,7 @@ html {
 
 body {
 	font-family: "Noto Sans";
+	width: 750px;
 }
 
 ul li a {
@@ -725,7 +726,7 @@ ul {
 
 
 	#home h1{
-		font-size: 0.5em;
+		font-size: 80px;
 		font-family: cursive;
 	}
 	
@@ -811,7 +812,7 @@ ul {
 		position: relative;
 
 		width: 750px;
-		height: 210vh;
+		height: 180vh;
 
 		/* hero-header flexbox */
 		display: flex;
