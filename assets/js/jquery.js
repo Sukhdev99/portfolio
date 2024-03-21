@@ -1,4 +1,16 @@
 // Code goes here
+  // JavaScript to toggle checkbox when span is clicked
+  const checkboxIcon = document.getElementById('checkboxIcon');
+  const checkbox = document.getElementById('menu-btn');
+
+  checkboxIcon.addEventListener('click', function() {
+    checkbox.checked = !checkbox.checked;
+    if (checkbox.checked) {
+      checkboxIcon.classList.add('checked');
+    } else {
+      checkboxIcon.classList.remove('checked');
+    }
+  });
 
 //home typewrite effect script
 var TxtType = function(el, toRotate, period) {
@@ -68,14 +80,14 @@ $(document).ready(function(){
   $('#responsive-navbar').hide();
 
   // Responsive Menu Activation
-  $('#menu-button').click(function(){
+  $('#checkboxIcon').click(function(){
     $('#responsive-navbar').slideToggle();
   });
 
-  // Responsive Menu Hiding Effect
-  $('#home-menu , #projects-menu , #blogs-menu , #other-menu').click(function(){
-    $('#responsive-navbar').slideToggle();
-  })
+  // // Responsive Menu Hiding Effect
+  // $('#home-menu , #projects-menu , #blogs-menu , #other-menu').click(function(){
+  //   $('#responsive-navbar').slideToggle();
+  // })
 
 
   // Moving Arrow FadeIn Effect
@@ -94,16 +106,16 @@ $(document).ready(function(){
 
 
 
-  //Responsive menu
-  $("#responsive-nav-bar").hide();
+  // //Responsive menu
+  // $("#responsive-nav-bar").hide();
 
-  $("#image-button-black").click(function(){
-    $("#responsive-nav-bar").slideToggle();
-  });
+  // $("#image-button-black").click(function(){
+  //   $("#responsive-nav-bar").slideToggle();
+  // });
 
-  $("#responsive-home-item , #responsive-features-item , #responsive-products-item , #responsive-media-item , #responsive-pricing-item").click(function(){
-    $("#responsive-nav-bar").slideToggle(200);
-  });
+  // $("#responsive-home-item , #responsive-features-item , #responsive-products-item , #responsive-media-item , #responsive-pricing-item").click(function(){
+  //   $("#responsive-nav-bar").slideToggle(200);
+  // });
 
 
 })

@@ -51,7 +51,7 @@ ul li a {
 	color: #565656;
 }
 
-#responsive-header {
+#menu-button {
 	display: none;
 }
 
@@ -617,15 +617,111 @@ ul {
 	color: #222
 }
 
+
+/* menu */
+
+#menu-button ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: #fff;
+  }
+
+#menu-button .responsive-navbar {
+	clear: both;
+	max-height: 100%;
+	transition: max-height .2s ease-out;
+  }
+  
+/* menu icon */
+
+#menu-button .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+  }
+  
+  #menu-button .menu-icon .navicon {
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 18px;
+  }
+  
+  #menu-button .menu-icon .navicon:before,
+  #menu-button .menu-icon .navicon:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+  }
+  
+  #menu-button .menu-icon .navicon:before {
+	top: 5px;
+  }
+  
+  #menu-button .menu-icon .navicon:after {
+	top: -5px;
+  }
+  
+  /* menu btn */
+  
+  #menu-button .menu-btn {
+	display: none;
+  }
+  
+  #menu-button .menu-btn:checked ~ .responsive-navbar {
+	max-height: 240px;
+  }
+  
+  #menu-button .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+  }
+  
+  #menu-button .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+  }
+  
+  #menu-button .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+  }
+  
+  #menu-button .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  #menu-button .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+  }
+  
+
 @media screen and (min-width: 200px) and (max-width: 450px) {
 
 
-	/* ---- Header Styling ---- */
 
+	#menu-button {
+		display: block;
+	}
+	
+	/* ---- Header Styling ---- */
+	
+
+	#menu-button .responsive-navbar {
+		clear: none;
+		float: right;
+		max-height: none;
+	  }
 
 	#header {
 		display: none;
 	}
+
 	#responsive-header {
 		position: fixed;
 		display: flex;
@@ -655,7 +751,7 @@ ul {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
-		align-items: center;
+		
 	}
 
 	#responsive-navbar {
@@ -698,6 +794,14 @@ ul {
 		font-size: 3.5em;
 	}
 
+	img {
+		margin: 10%;
+	}
+
+	#home {
+		font-size: 200px;
+	}
+
 	#moving-arrow {
 		position: absolute;
 		display: flex;
@@ -707,6 +811,7 @@ ul {
 		right: 0;
 		bottom: 0;
 		width: 12%;
+		margin-bottom: 40%;
 	}
 
 
@@ -740,7 +845,7 @@ ul {
 		margin-top: 3%;
 		width: 30%;
 	}
-	
+
 	#fifth-five {
 		overflow-x: auto;
 		display: flex;
@@ -750,5 +855,5 @@ ul {
 		align-items: center;
 	}
 
-	
+
 }
