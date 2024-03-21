@@ -84,10 +84,10 @@ $(document).ready(function(){
     $('#responsive-navbar').slideToggle();
   });
 
-  // // Responsive Menu Hiding Effect
-  // $('#home-menu , #projects-menu , #blogs-menu , #other-menu').click(function(){
-  //   $('#responsive-navbar').slideToggle();
-  // })
+  // Responsive Menu Hiding Effect
+  $('#home-menu , #projects-menu , #blogs-menu , #other-menu').click(function(){
+    $('#responsive-navbar').slideToggle();
+  })
 
 
   // Moving Arrow FadeIn Effect

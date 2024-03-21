@@ -135,6 +135,7 @@ ul li a {
 
 #about-me {
 	padding-top: 5rem;
+	width: 600px;
 }
 
 #about-me .text {
@@ -166,10 +167,12 @@ ul li a {
 
 #experience {
 	padding-top: 5rem;
+	width: 600px;
 }
 
 #education {
 	padding-top: 5rem;
+	width: 600px;
 }
 
 #education .active {
@@ -626,14 +629,14 @@ ul {
 	list-style: none;
 	overflow: hidden;
 	background-color: #fff;
-  }
+}
 
 #menu-button .responsive-navbar {
 	clear: both;
 	max-height: 100%;
 	transition: max-height .2s ease-out;
-  }
-  
+}
+
 /* menu icon */
 
 #menu-button .menu-icon {
@@ -643,19 +646,35 @@ ul {
 	padding: 28px 20px;
 	position: relative;
 	user-select: none;
-  }
-  
-  #menu-button .menu-icon .navicon {
-	background: #333;
+}
+
+#menu-button .menu-icon .navicon {
 	display: block;
-	height: 2px;
+	width: 50px;
+	height: 6px;
+	margin: 8px;
 	position: relative;
-	transition: background .2s ease-out;
-	width: 18px;
-  }
-  
-  #menu-button .menu-icon .navicon:before,
-  #menu-button .menu-icon .navicon:after {
+
+	background: #cdcdcd;
+	border-radius: 3px;
+
+	z-index: 1;
+
+	transform-origin: 4px 0px;
+
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		opacity 0.55s ease;
+}
+
+.menu-icon input:checked~span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #232323;
+}
+
+#menu-button .menu-icon .navicon:before,
+#menu-button .menu-icon .navicon:after {
 	background: #333;
 	content: '';
 	display: block;
@@ -663,60 +682,64 @@ ul {
 	position: absolute;
 	transition: all .2s ease-out;
 	width: 100%;
-  }
-  
-  #menu-button .menu-icon .navicon:before {
+}
+
+#menu-button .menu-icon .navicon:before {
 	top: 5px;
-  }
-  
-  #menu-button .menu-icon .navicon:after {
+}
+
+#menu-button .menu-icon .navicon:after {
 	top: -5px;
-  }
-  
-  /* menu btn */
-  
-  #menu-button .menu-btn {
+}
+
+/* menu btn */
+
+#menu-button .menu-btn {
 	display: none;
-  }
-  
-  #menu-button .menu-btn:checked ~ .responsive-navbar {
+}
+
+#menu-button .menu-btn:checked~.responsive-navbar {
 	max-height: 240px;
-  }
-  
-  #menu-button .menu-btn:checked ~ .menu-icon .navicon {
+}
+
+#menu-button .menu-btn:checked~.menu-icon .navicon {
 	background: transparent;
-  }
-  
-  #menu-button .menu-btn:checked ~ .menu-icon .navicon:before {
+}
+
+/* #menu-button .menu-btn:checked~.menu-icon .navicon:before {
 	transform: rotate(-45deg);
-  }
-  
-  #menu-button .menu-btn:checked ~ .menu-icon .navicon:after {
+}
+
+#menu-button .menu-btn:checked~.menu-icon .navicon:after {
 	transform: rotate(45deg);
-  }
-  
-  #menu-button .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  #menu-button .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+} */
+
+#menu-button .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+#menu-button .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
 	top: 0;
-  }
-  
-
-@media screen and (min-width: 200px) and (max-width: 450px) {
+}
 
 
+@media screen and (max-width: 450px) {
+
+
+	ul li a {
+		font-size: 2em;
+		font-family: cursive;
+	}
 
 	#menu-button {
 		display: block;
 	}
-	
+
 	/* ---- Header Styling ---- */
-	
+
 
 	#menu-button .responsive-navbar {
 		clear: none;
 		float: right;
 		max-height: none;
-	  }
+	}
 
 	#header {
 		display: none;
@@ -751,7 +774,7 @@ ul {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
-		
+
 	}
 
 	#responsive-navbar {
@@ -777,8 +800,8 @@ ul {
 		/* Positioning */
 		position: relative;
 
-		/* width: 100vw; */
-		height: 100vh;
+		width: 750px;
+		height: 210vh;
 
 		/* hero-header flexbox */
 		display: flex;
@@ -811,7 +834,7 @@ ul {
 		right: 0;
 		bottom: 0;
 		width: 12%;
-		margin-bottom: 40%;
+
 	}
 
 
