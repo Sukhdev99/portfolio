@@ -10,7 +10,6 @@ html {
 
 body {
 	font-family: "Noto Sans";
-	width: 750px;
 }
 
 ul li a {
@@ -84,7 +83,6 @@ ul li a {
 	font-family: cursive;
 }
 
-
 .heading {
 	color: rgba(22, 22, 23, .8);
 	;
@@ -137,7 +135,6 @@ ul li a {
 
 #about-me {
 	padding-top: 5rem;
-
 }
 
 #about-me .text {
@@ -669,7 +666,7 @@ ul {
 		opacity 0.55s ease;
 }
 
-#menu-button .menu-icon input:checked~span {
+.menu-icon input:checked~span {
 	opacity: 1;
 	transform: rotate(45deg) translate(-2px, -1px);
 	background: #232323;
@@ -725,15 +722,6 @@ ul {
 @media screen and (max-width: 450px) {
 
 
-	#home h1{
-		font-size: 80px;
-		font-family: cursive;
-	}
-	
-	#about-me {
-	
-		width: 600px;
-	}
 	ul li a {
 		font-size: 2em;
 		font-family: cursive;
@@ -812,7 +800,7 @@ ul {
 		position: relative;
 
 		width: 750px;
-		height: 180vh;
+		height: 210vh;
 
 		/* hero-header flexbox */
 		display: flex;
